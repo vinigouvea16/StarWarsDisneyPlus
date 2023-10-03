@@ -1,0 +1,188 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  font-family: 'Montserrat', sans-serif;
+  background-color: black;
+  overflow-x: hidden;
+  width: 100vw;
+  height: 100vh;
+}
+
+
+#BGimage{
+  display: none;
+}
+
+
+a{
+  text-decoration: none;
+  color: white;
+}
+
+.logo img{
+  width: 80px;
+  height: 50px;
+}
+
+header{
+  display: flex;
+  flex-direction: row;
+  width: 100%;
+  justify-content: space-between;
+  padding: 10px 40px;
+  font-size: 16px;
+  background: linear-gradient(180deg, #000000 0%, rgba(0, 0, 0, 0.5) 100%);
+}
+
+header nav{
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  gap: 60px;
+}
+
+header nav ul{
+  display: flex;
+  flex-direction: row;
+  gap: 30px;
+  align-items: center;
+  list-style-type: none;
+}
+
+header nav ul a{
+  display: flex;
+  align-items: center;
+  gap: 2px;
+  text-transform: uppercase;
+}
+
+.avatar{
+  display: flex;
+  align-items: center;
+  gap: 16px;
+  color: white;
+}
+
+video{
+  position: fixed;
+  top: 0;
+  width: 100%;
+  height: 100vh;
+  z-index: -1;
+  opacity: 50%;
+  object-fit: cover;
+}
+
+main{
+  margin: 550px 40px;
+  animation-name: upward;
+  animation-duration: 4s;
+  /* animation-fill-mode: forwards; */
+  /* animation-delay: 1s; */
+  /* animation-timing-function: steps(3,start) */
+}
+
+h3{
+  color: white;
+  font-size: 20px;
+  font-weight: 500;
+}
+
+section{
+  display: grid;
+  margin-top: 20px;
+  padding-bottom: 40px;
+  grid-template-columns: repeat(5,1fr);
+  gap: 45px;
+  overflow-x: visible;
+}
+
+
+.card img{
+  box-shadow: 0px 0px 4.58163px 4.58163px rgba(0, 0, 0, 0.5);
+  border-radius: 5px;
+  transition: all 0.1s ease-in-out;
+
+  width: 100%;
+  display: block;
+}
+
+.card img:hover{
+  outline: 4.58163px solid #FFFFFF;
+  scale: 1.02;
+}
+
+/* ===== Scrollbar CSS ===== */
+
+  /* Chrome, Edge, and Safari */
+  *::-webkit-scrollbar {
+    width: 8px;
+  }
+
+  *::-webkit-scrollbar-thumb {
+    background: linear-gradient(180deg, #ffffff 0%, rgba(0, 0, 0, 0.5) 100%);
+    border-radius: 8px;
+  }
+
+@media (min-width: 601px) {
+  @keyframes upward {
+
+    0%{
+      opacity: 0;
+      transform: translateY(1000px);
+    }
+    50%{
+      opacity: 50;
+      transform: translateY(500px);
+    }
+    100%{
+      opacity: 1;
+      transform: translateY(0);
+    }
+}
+}
+
+
+
+
+@media (max-width: 600px){
+  
+  body{
+    font-family: 'Montserrat', sans-serif;
+  background-color: rgb(26, 26, 38);
+  overflow-x: hidden;
+  width: 100vw;
+  height: 100vh;
+  }
+
+
+  #BGimage{
+    display: block;
+    position: fixed;
+    top: 0;
+    width: 100%;
+    /* overflow-x: visible; */
+    height: 100vh;
+    z-index: -1;
+    opacity: 70%;
+    object-fit: cover;
+  }
+
+  video{
+    display: none;
+  }
+
+  header{
+    display: flex;
+    flex-direction: row;
+    width: 100%;
+    justify-content: space-between;
+    padding: 10px 40px;
+    font-size: 16px;
+    background: none;
+  }
+}
