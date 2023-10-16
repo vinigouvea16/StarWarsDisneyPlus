@@ -35,7 +35,7 @@ header{
   justify-content: space-between;
   padding: 10px 40px;
   font-size: 16px;
-  background: linear-gradient(180deg, #000000 0%, rgba(0, 0, 0, 0.5) 100%);
+  background: linear-gradient(180deg, rgba(0,0,0,1) 0%, rgba(255,255,255,0) 100%);
 }
 
 header nav{
@@ -58,6 +58,10 @@ header nav ul a{
   align-items: center;
   gap: 2px;
   text-transform: uppercase;
+}
+
+li:nth-child(7){
+  display: none;
 }
 
 .avatar{
@@ -149,10 +153,10 @@ section{
 
 
 
-@media (max-width: 600px){
+@media (max-width: 470px){
   
   body{
-    font-family: 'Montserrat', sans-serif;
+  font-family: 'Montserrat', sans-serif;
   background-color: rgb(26, 26, 38);
   overflow-x: hidden;
   width: 100vw;
@@ -166,9 +170,9 @@ section{
     top: 0;
     width: 100%;
     /* overflow-x: visible; */
-    height: 100vh;
+    height: 40vh;
     z-index: -1;
-    opacity: 70%;
+    opacity: 75%;
     object-fit: cover;
   }
 
@@ -183,6 +187,55 @@ section{
     justify-content: space-between;
     padding: 10px 40px;
     font-size: 16px;
-    background: none;
   }
+
+  li:nth-child(4),
+  li:nth-child(5),
+  li:nth-child(6){
+    display: none;
+  }
+  
+  li:nth-child(7){
+    display: block;
+  }
+  
+  header span{
+    display: none;
+  }
+  
+  header nav{
+    gap: 30px;
+  }
+  
+  .logo img{
+    width: 60px;
+    height: 70px;
+  }
+
+  section{
+    display: grid;
+    margin-top: 20px;
+    padding-bottom: 40px;
+    grid-template-columns: repeat(2,1fr);
+    gap: 45px;
+  }
+  section .card:nth-child(5){
+    display: none;
+  }
+  main{
+    margin: 110px 20px;
+    animation-name: upward;
+    animation-duration: 2s;
+  }
+
+  @keyframes upward {
+    0%{
+      opacity: 0;
+      transform: translateY(500px);
+    }
+    100%{
+      opacity: 1;
+      transform: translateY(0);
+    }
+}
 }
